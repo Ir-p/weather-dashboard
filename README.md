@@ -5,7 +5,7 @@ This app is an interactive app which allows to access third-party OpenWeather AP
 ## Getting Started
 * clone me, or fork me
   
-🌎 live at: [Weather Dashboard link] 
+🌎 live at: [Weather Dashboard link](https://ir-p.github.io/weather-dashboard/)
 
 Screen shot of the deployed app:
 ![Screenshot:](assets/images/screenshot.jpg);
