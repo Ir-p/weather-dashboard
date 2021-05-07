@@ -9,9 +9,14 @@ function handleSubmit(event){
     // read value from input 
     console.log(cityInputEl.value)
     // make ajax call to the weather API
+    
     fetch(apiURL + inputCity)
         .then(processStream)
         .then(logCityWeather)
+        .catch(function(error){
+            console.log("There is an error.", error)
+        })
+
 }
 
 function processStream (response){
@@ -19,5 +24,16 @@ function processStream (response){
 }
 
 function logCityWeather(data){
-    console.log(data)
+    // console.log(data)
+    // console.log("tempreture", ((9/5)*(data.main.temp-273)+32).toFixed(2),"calvin", data.main.temp)
+    // console.log("humidity", data.main.humidity)
+    // console.log("wind speed", data.wind.speed)
+    var tempreture = ((9/5)*(data.main.temp-273)+32).toFixed(2)
+    var humidity = data.main.humidity
+    var windSpeed = data.wind.speed
+    document.getElementById('tempreture').textContent = "Tempreture: " + tempreture 
+    document.getElementById('humidity').textContent = "Humidity: " + humidity 
+    document.getElementById('wind-speed').textContent = "Wind Speed: " + windSpeed 
+
+
 }
