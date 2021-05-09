@@ -1,8 +1,8 @@
 // var inputCity = "new york";
 var currentApiURL =
-  "http://api.openweathermap.org/data/2.5/weather?appid=d91f911bcf2c0f925fb6535547a5ddc9&q=";
+  "https://api.openweathermap.org/data/2.5/weather?appid=d91f911bcf2c0f925fb6535547a5ddc9&q=";
 var onecallAprilURL =
-  "http://api.openweathermap.org/data/2.5/onecall?appid=d91f911bcf2c0f925fb6535547a5ddc9&";
+  "https://api.openweathermap.org/data/2.5/onecall?appid=d91f911bcf2c0f925fb6535547a5ddc9&";
 var searchHistory = [];
 
 var history = document.getElementById("history");
