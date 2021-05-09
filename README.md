@@ -1,5 +1,7 @@
 # weather-dashboard
 
+Need more time to submit complete Homework
+
 This app is an interactive app which allows to access third-party OpenWeather API to retrieve weather data for cities. 
 
 ## Getting Started
