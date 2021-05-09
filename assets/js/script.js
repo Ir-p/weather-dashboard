@@ -24,13 +24,13 @@ function handleSubmit(event) {
     .then(renderCurrentWeather)
     .catch(console.log);
 
-    fetch(currentApiURL + inputCity)
-    .then(processStream)
-    .then(getCoords)
-    .then(getWeather)
-    .then(processStream)
-    .then(renderFiveDaysForecast)
-    .catch(console.log);
+    // fetch(currentApiURL + inputCity)
+    // .then(processStream)
+    // .then(getCoords)
+    // .then(getWeather)
+    // .then(processStream)
+    // .then(renderFiveDaysForecast)
+    // .catch(console.log);
 }
 
 function renderCurrentWeather(weatherData) {
@@ -50,26 +50,26 @@ function renderCurrentWeather(weatherData) {
   document.getElementById("city").textContent = city
 }
 
-function renderFiveDaysForecast(forecastData) {
-  var startDate = moment().add(1, 'day').startOf('day').format('M/D/YYYY')
+// function renderFiveDaysForecast(forecastData) {
+//   var startDate = moment().add(1, 'day').startOf('day').format('M/D/YYYY')
   
   // var tempreture = ((9 / 5) * (forecastData.daily[first].temp.day - 273) + 32).toFixed(2);
-  var dataArray = forecastData.daily
-  console.log(dataArray)
-  var firstDay = dataArray;
-  var container = document.getElementById('day-1');
-  for (var i=0; i<dataArray.length; i += 1){
-    let data = document.createElement('div');
-    data.innerHTML = dataArray[i];
-    container.appendChild(data);
+  // var dataArray = forecastData.daily
+//   console.log(dataArray)
+//   var firstDay = dataArray;
+//   var container = document.getElementById('day-1');
+//   for (var i=0; i<dataArray.length; i += 1){
+//     let data = document.createElement('div');
+//     data.innerHTML = dataArray[i];
+//     container.appendChild(data);
     
-    console.log(firstDay);
-  }
-  document.getElementById('day-1').textContent = startDate;
-  document.getElementById('day-1-tempreture').textContent =
-  "Tempreture: " + tempreture;
-  document.getElementById('day-1-humidity').textContent = "Humidity: " + humidity;
-}
+//     console.log(firstDay);
+//   }
+//   document.getElementById('day-1').textContent = startDate;
+//   document.getElementById('day-1-tempreture').textContent =
+//   "Tempreture: " + tempreture;
+//   document.getElementById('day-1-humidity').textContent = "Humidity: " + humidity;
+// }
 function getWeather(urlsParams) {
   return fetch(onecallAprilURL + urlsParams);
 }
