@@ -29,11 +29,15 @@
         </form>
     </div>
     <!-- search history display  -->
-    <div id="history"></div>
+    <div class = "history">
+    </div>
     <!-- weather display  -->
     <div id="weather">
-        <h1 id="today"></h1>
-            <h2 id="city"></h2>
+        <h1 id="city"></h1>
+            <div id="icon">
+                <img src="" alt="weather icon" id="today-icon">
+            </div>
+            <h2 id="today"></h2>
             <div id="tempreture">
             </div>
             <div id="humidity"></div>
@@ -41,40 +45,56 @@
             <div id="uvi"></div>
     </div>
     <!-- forecast display  -->
-    <div id="forecast">
-        <h1 id="forecast">5 Days Weather Forecast</h1>
-            <h2 id="day-1"></h2>
-                <div class="day-1" style='background-color: blue;'>
-                    <div id="day-1-tempreture">
-                    </div>
-                    <div id="day-1-humidity"></div>
-                </div>
-        <h2 id="day-2"></h2>
-            <div class="day-2" style='background-color: green;'>
-                <div id="day-2-tempreture">
-                </div>
-                <div id="day-2-humidity"></div>
+    <h1 id="forecast">5 Days Weather Forecast</h1>
+    <section id="forecast" class = "row justify-center">
+        <div class="card-column day-1">
+            <h3 class="card-header" id="day-1"></h3>
+            <div class="card-body" id="icon">
+                <img src="" alt="weather icon" id="day-1-icon">
             </div>
-        <h2 id="day-3"></h2>
-            <div class="day-3" style='background-color: yellow;'>
-                <div id="day-3-tempreture">
+            <div class="card-body" id="day-1-tempreture">
                 </div>
-                <div id="day-3-humidity"></div>
-            </div>
-        <h2 id="day-4"></h2>
-            <div class="day-4" style='background-color: red;'>
-                <div id="day-4-tempreture">
-                </div>
-                <div id="day-4-humidity"></div>
-            </div>
-        <h2 id="day-5"></h2>
-            <div class="day-5" style='background-color: aqua;'>
-                <div id="day-5-tempreture">
-                </div>
-                <div id="day-5-humidity"></div>
-            </div>       
+            <div class="card-body" id="day-1-humidity"></div>
         </div>
-    </div>
+        <div class="card-column day-2">
+            <h3 class="card-header" id="day-2"></h3>
+            <div class="card-body" id="icon">
+                <img src="" alt="weather icon" id="day-2-icon">
+            </div>
+            <div class="card-body" id="day-2-tempreture">
+                </div>
+            <div class="card-body" id="day-2-humidity"></div>
+        </div>
+        <div class="card-column day-3">
+            <h3 class="card-header" id="day-3"></h3>
+            <div class="card-body" id="icon">
+                <img src="" alt="weather icon" id="day-3-icon">
+            </div>
+            <div class="card-body" id="day-3-tempreture">
+                </div>
+            <div class="card-body" id="day-3-humidity"></div>
+        </div>
+        <div class="card-column day-4">
+            <h3 class="card-header" id="day-4"></h3>
+            <div class="card-body" id="icon">
+                <img src="" alt="weather icon" id="day-4-icon">
+            </div>
+            <div class="card-body" id="day-4-tempreture">
+                </div>
+            <div class="card-body" id="day-4-humidity"></div>
+        </div>
+        <div class="card-column day-5">
+            <h3 class="card-header" id="day-5"></h3>
+            <div class="card-body" id="icon">
+                <img src="" alt="weather icon" id="day-5-icon">
+            </div>
+            <div class="card-body" id="day-5-tempreture">
+                </div>
+            <div class="card-body" id="day-5-humidity"></div>
+        </div>
+      
+    </section>
+    
     <!-- local scipt  -->
     <script src="assets/js/script.js"></script>
 </body>
